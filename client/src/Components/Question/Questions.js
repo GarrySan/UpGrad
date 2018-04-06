@@ -71,7 +71,8 @@ class Questions extends React.Component{
         
         if(bool&&this.props.state){
             console.log('here')
-            const allQuestions = this.props.state.questions.map((question) => question.id);
+            const allQuestions = this.props.state.questions.map((question, index) => index);
+            console.log(allQuestions);
             this.setState({questions: allQuestions, allSelect: true});
         }
         else if(bool){
